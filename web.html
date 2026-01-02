@@ -183,8 +183,7 @@
       <button id="loginTab" class="active">Login</button>
       <button id="registerTab">Register</button>
     </div>
-
-    <!-- Login Form -->
+    
     <form id="loginForm" class="active">
       <h2>Login</h2>
       <div class="input-group">
@@ -201,7 +200,6 @@
       <div class="success" id="loginSuccess">Login Successful!</div>
     </form>
 
-    <!-- Register Form -->
     <form id="registerForm">
       <h2>Register</h2>
       <div class="input-group">
@@ -231,7 +229,6 @@
     const registerForm = document.getElementById('registerForm');
     const themeToggle = document.getElementById('themeToggle');
 
-    // Tabs
     loginTab.onclick = () => {
       loginTab.classList.add('active');
       registerTab.classList.remove('active');
@@ -246,13 +243,13 @@
       loginForm.classList.remove('active');
     };
 
-    // Theme toggle (FIXED)
+   
     themeToggle.addEventListener('click', () => {
       document.body.classList.toggle('light');
       themeToggle.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
     });
 
-    // Login validation
+    
     loginForm.addEventListener('submit', e => {
       e.preventDefault();
       let valid = true;
@@ -273,7 +270,7 @@
       }
     });
 
-    // Register validation
+    
     registerForm.addEventListener('submit', e => {
       e.preventDefault();
       let valid = true;
@@ -301,3 +298,4 @@
   </script>
 </body>
 </html>
+
